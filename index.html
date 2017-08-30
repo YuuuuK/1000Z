@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title><!-- (ง •̀_•́)ง -->1000Z</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="asset/css/swiper.min.css">
+	<link rel="stylesheet" type="text/css" href="asset/css/jquery.fullPage.css" />
+	<link rel="stylesheet" type="text/css" href="asset/css/examples.css" />
+	<link rel="stylesheet" type="text/css" href="asset/css/mystyle.css" />
+    <!-- Demo styles -->
+    <script src="asset/js/jquery.min.js"></script>
+	<script src="asset/js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="asset/js/scrolloverflow.js"></script>
+	<script type="text/javascript" src="asset/js/jquery.fullPage.js"></script>
+	<script type="text/javascript" src="asset/js/examples.js"></script>
+	<script type="text/javascript" src="asset/js/swiper.min.js"></script>
+	<script type="text/javascript" src="asset/js/myjq.js"></script>
+	<script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                menu: '#menu',
+                anchors: ['firstPage', 'secondPage', '3rdPage','4rdPage','5rdPage','6rdPage','7rdPage','8rdPage'],
+                
+                onLeave: function(index, nextIndex, direction){
+	                if(nextIndex === 3){
+	                    var destinationSection = $('.section').eq(nextIndex-1);
+	                    destinationSection.addClass('load-background');
+	                }
+	                if(nextIndex >1){
+	                  	$('.logo-box').animate({
+	                  		backgroundColor:' rgba(17,17,17,0.6)',
+							height : '60px',                   		
+	                  	},300),
+	                  	$('.logo').animate({
+	                  		top:'10',
+	                  	},300),
+	                  	$('.logo-2').animate({
+	                  		top:'22',
+	                  	},300),
+	                  	$('.logo img').animate({
+	                  		width:'80%',
+	                  		height:'80%',
+	                  	},300),
+	                  	$('#menu').animate({
+	                  		marginTop:'18px',
+	                  		fontSize:'14px',
+	                  	},300),
+	                  	$('#menu li').animate({
+	                  		padding: '0',
+	                  	},300)
+	                  	
+	                }else{
+	                  	$('.logo-box').animate({
+	                  		backgroundColor:' rgba(17,17,17,0)',
+	                  	},300),
+	                  	$('.logo').animate({
+	                  		top:'20',
+	                  	},300),
+	                  	$('.logo img').animate({
+	                  		width:'100%',
+	                  		height:'100%',
+	                  	},300),
+	                  	$('.logo-2').animate({
+	                  		top:'32',
+	                  	},300),
+	                  	$('#menu').animate({
+	                  		marginTop:'36',
+	                  		fontSize:'20',
+	                  	},300),
+	                  	$('#menu li').animate({
+	                  		padding: ' 0 5px',
+	                  	},300)
+	                  	
+	                }
+                  
+                }
+            });
+        });
+      </script>  
+    <style>
+    html, body {
+        position: relative;
+        height: 100%;
+        cursor: pointer;
+        overflow: hidden;
+    }
+    body {
+       /* background: #eee;*/
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+    }
+    .swiper-container {
+        width: 100%;
+        height: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+    }
+    </style>
+</head>
+
+<body>
+	<div class="logo-box">
+	 	<div class="logo">
+			<a href=""><img src="asset/img/logo.png" alt="" /></a>
+		</div>
+		
+		<div class="logo-2">
+			<i></i>
+			<a href=""> <span>4006-123-011</span></a>
+		</div>
+	</div>
+	<!--固定右边栏-->
+	<div class="r-fixed-box">
+		<ul class="r-fixed">
+			<li class="li1"><i></i></li>
+			<li class="li2">
+				<div class="i-box"><i></i></div>
+				
+				<div class="li-con-1">
+					<p>网站建设咨询</p>
+					<p>在线沟通，请点我</p>
+					<span class="spn">在线咨询</span>
+				</div>
+			</li>
+			<li class="li3">
+				<div class="i-box"><i></i></div>
+				<div class="li-con-2">
+					<p>我要做网站，</p>
+					<p>小助啊，抓紧给我来个电话！</p>
+					<div class="txt-box">
+						<i></i>
+						<input type="text" placeholder="您的电话"/>
+						<a href=""><span>回拨</span></a>
+					</div>
+				</div>
+			</li>
+			<li class="li4">
+				<div class="i-box"><i></i></div>
+				<div class="li-con-3">
+					<i></i>
+				</div>
+			</li>
+			<li class="li5"><i></i></li>
+		</ul>
+		<i class="x"></i>
+	</div>
+	<ul id="menu">
+	    <li data-menuanchor="firstPage" class="active"><a href="#firstPage">首页</a></li>
+	    <li data-menuanchor="secondPage"><a href="#secondPage">业务</a></li>
+	    <li data-menuanchor="3rdPage"><a href="#3rdPage">案例</a></li>
+	    <li data-menuanchor="4rdPage"><a href="#4rdPage">客户</a></li>
+	    <li data-menuanchor="5rdPage"><a href="#5rdPage">品质</a></li>
+	    <li data-menuanchor="6rdPage"><a href="#6rdPage">增值</a></li>
+	    <li data-menuanchor="7rdPage"><a href="#7rdPage">关于</a></li>
+	    <li data-menuanchor="8rdPage"><a href="#8rdPage">联系</a></li>
+	</ul>
+	
+	<div id="fullpage">
+		<div class="new">
+			<u>NEWS：</u>
+			<ul class="new-ul">
+				<li>
+					<a href=""><span class="new-spn">钱都砸去哪里了，为什么我的网站推广没有效果？</span></a>
+				</li>
+				<li>
+					<a href=""><span class="new-spn">品牌影响力！祝贺我司荣获“国家高新技术企业”认定</span></a>
+				</li>
+				<li>
+					<a href=""><span class="new-spn">还在问做网站哪家公司好？业内人士教你选...</span></a>
+				</li>
+				<li>
+					<a href=""><span class="new-spn">2016金猴收年，2017闻鸡起舞，千助给您拜早年啦！</span></a>
+				</li>
+				<li>
+					<a href=""><span class="new-spn">百度祭出大招“蓝天算法”，一旦触发直接判罚整站</span></a>
+
+				</li>
+			</ul>
+			<u class="u">more</u>
+			
+		</div>
+		
+		<div class="bottom-btn"><i class="new-i"></i></div>
+		<div class="logo-con">
+			<a href="">热烈祝贺我司荣获 “国家高新技术企业” 认定</a>
+		</div>
+		<!--第一主页-->
+	    <div class="section " id="section0">
+		    <!-- Swiper -->
+		    <div class="swiper-container">
+		        <div class="swiper-wrapper">
+		            <div class="swiper-slide bgc-1">
+	            		<div class="bgc-con-a">
+            				<div class="bgc-con-a1"></div>
+            				<div class="bgc-con-a2">
+            					<span>年专注，网站建设</span>
+	            				<i></i>
+	            				<p>
+	            					始于 2008 - 2017 展望未来
+	            					<br />
+	            					专注于设计体验，专业于解决方案
+	            				</p>
+            				</div>
+            				<!--广告-->
+            				
+            			</div>
+		            </div>
+		            <div class="swiper-slide bgc-2">
+		            	<div class="bgc-con-b">
+		            		<div class="bgc-con-b1">
+            					<span>设计控，也醉了</span>
+	            				<i></i>
+	            				<p>不是非要高大上，只是醉心于设计<br />我们想，再上一个好案例</p>
+		            		</div>
+		            		
+		            	</div>
+		            </div>
+		            <div class="swiper-slide bgc-3">
+		            	<div  class="bgc-con-c">
+		            		<span>技术派，论研发</span>
+		            		<i></i>
+		            		<p>我说，业界没有最好的技术，只有最棒的技术开发者<br />定制研发，为您的客户和团队</p>
+		            	</div>
+		            	
+		            </div>
+		            <div class="swiper-slide bgc-4">
+		            	<div  class="bgc-con-d">
+		            		<span>先入为主，布局未来</span>
+		            		<i></i>
+		            		<p>
+		            			全面布局
+		            			<u>PC</u> 端与 <u>移动</u>
+		            			<br />
+		            			抢占头等商机
+		            			<br />基于 <u>Html5</u> 响应式布局，智能识别多种终端设备
+		            		</p>
+		            	</div>
+		            </div>
+		        </div>
+		        <!-- Add Pagination -->
+		        <div class="swiper-pagination"></div>
+		        <!-- Add Arrows -->
+		         <!--<div class="swiper-button-next"></div>
+		        <div class="swiper-button-prev"></div> -->
+	        </div>
+	    </div>
+	    <!--第二主页-->
+	    <div class="section yewu" id="section1">
+	     	<div class="yw">
+				<i class="yw-title"></i>	 
+				<p class="yw-p">我们能做什么</p>
+				<ul>
+					<li class="yw-li1">
+						<div class="li1-box">
+							<span class="li1-spn"></span>
+							<i class="cup-left"></i>
+							<i class="cup-right"></i>
+						</div>
+						<p class="pp">高端定制网页</p>
+						<div class="hid-p">
+							<p class="pp1">企业高端定制网站设计<br/>彰显品牌形象</p>
+						</div>
+					</li>
+					<li class="yw-li1">
+						<div class="li1-box">
+							<span class="li2-spn"></span>
+							<i class="cup-left"></i>
+							<i class="cup-right"></i>
+						</div>
+						<p class="pp">移动网站建设</p>
+						<div class="hid-p">
+							<p>定制手机网站 / 微网站制作<br/>布局移动互联网</p>
+						</div>
+					</li>
+					<li class="yw-li1">
+						<div class="li1-box">
+							<span class="li3-spn"></span>
+							<i class="cup-left"></i>
+							<i class="cup-right"></i>
+						</div>
+						<p class="pp">业务系统研发</p>
+						<div class="hid-p">
+							<p>基于 B/S 架构的系统研发<br/>让业务办公轻松自如</p>
+						</div>
+					</li>
+					<li class="yw-li1">
+						<div class="li1-box">
+							<span class="li4-spn"></span>
+							<i class="cup-left"></i>
+							<i class="cup-right"></i>
+						</div>
+						<p class="pp">APP应用程序</p>
+						<div class="hid-p">
+							<p class="pp2">基于 iOS / Android 应用开发<br/>掌控智能终端时代</p>
+						</div>
+					</li>
+					<li class="yw-li1">
+						<div class="li1-box">
+							<span class="li5-spn"></span>
+							<i class="cup-left"></i>
+							<i class="cup-right"></i>
+						</div>
+						<p class="pp">服务器运维</p>
+						<div class="hid-p">
+							<p>我们不只提供云硬件和网络<br/>更加注重技术运维</p>
+						</div>
+					</li>
+				</ul>
+				<div class="label"></div>
+	      	</div>
+	       
+	
+	    </div>
+	    
+	    <div class="section anli" id="section2">
+	        <div class="al">
+	        	<i class="al-title"></i>	 
+				<p class="al-p">案例欣赏</p>
+				<ul>
+					<li>
+						<div class="hide-box"><i></i></div>
+						<a href="" class="img-a"><img src="asset/img/al1.jpg" alt="" /></a>
+						<div class="al-box">
+							<p>网站设计</p>
+							<strong>ATA网站建设</strong>
+							<p>官方网站，上市公司，红色</p>
+							<div class="al-line"></div>
+						</div>
+					</li>
+					<li>
+						<div class="hide-box"><i></i></div>
+						<a href="" class="img-a"><img src="asset/img/al2.jpg" alt="" /></a>
+						<div class="al-box">
+							<p>网站设计</p>
+							<strong>中远国际航空网站设计</strong>
+							<p>国有企业 , 蓝色 , 欧美风格 , 上市公司</p>
+							<div class="al-line"></div>
+						</div>
+					</li>
+					<li>
+						<div class="hide-box"><i></i></div>
+						<a href="" class="img-a"><img src="asset/img/al3.jpg" alt="" /></a>
+						<div class="al-box">
+							<p>网站设计</p>
+							<strong>海尔嫩烤箱官方网站建设</strong>
+							<p>上市公司 , 官方网站 , 欧美风格</p>
+							<div class="al-line"></div>
+						</div>
+					</li>
+				</ul>
+				<div class="al-spn">更多设计案例</div>
+	        </div>
+	        
+	    </div>
+	    
+	     <div class="section kehu" id="section3">
+	        <div class="kh">
+	        	<i class="kh-title"></i>	 
+				<p class="kh-p">案例欣赏</p>
+				<ul class="kh-ul">
+					<li class="kh-li1"></li>
+					<li class="kh-li2"></li>
+					<li class="kh-li3"></li>
+					<li class="kh-li4"></li>
+					<li class="kh-li5"></li>
+					<li class="kh-li6"></li>
+					<li class="kh-li7"></li>
+					<li class="kh-li8"></li>
+					<li class="kh-li9"></li>
+					<li class="kh-li10"></li>
+					
+				</ul>
+				<i class="kh-i"></i>
+				<div class="kh-yin"></div>
+	        </div>
+	    </div>
+	    
+	     <div class="section pinzhi" id="section4">
+	        <div class="pz">
+	        	<i class="pz-title"></i>	 
+				<p class="pz-p">案例欣赏</p>
+	        	<ul class="pz-ul">
+	        		<li>
+	        			<div class="pz-box">
+	        				<i class="pz-i1"></i>
+	        				<i class="pz-i2"></i>
+	        				<i class="pz-i3"></i>
+	        			</div>
+	        			<p>
+	        				触及视觉灵魂的设计趋势
+	        				<br />
+	        				精心布局的用户体验
+	        				<br />
+	        				毫无顾忌地通过任何终端
+	        				<br />
+	        				呈现在客户的眼前
+	        			</p>
+	        		</li>
+	        		<li>
+	        			<div class="pz-box">
+	        				<i class="pz-i4"></i>
+	        				<i class="pz-i5"></i>
+	        				<i class="pz-i6"></i>
+	        				<i class="pz-i7"></i>
+	        			</div>
+	        			<p>
+	        				Html5 + CSS3 响应式布局
+	        				<br />
+	        				卓越的浏览器兼容性
+	        				<br />
+	        				因为高端，所以出众
+	        			</p>
+	        		</li>
+	        		<li>
+	        			<div class="pz-box">
+	        				<i class="pz-i8"></i>
+	        				<i class="pz-i9"></i>
+	        				<i class="pz-i10"></i>
+	        			</div>
+	        			<p>
+	        				基于 B/S 架构的网站建设
+	        				<br />
+	        				无障碍的跨平台应用
+	        				<br />
+	        				无须用户下载安装即可使用
+	        				<br />
+	        				云端管理，轻松维护
+	        			</p>
+	        		</li>
+	        	</ul>
+	        	 <div class="pz-bottom">
+		        	<div class="pz-spn">响应式网站的照妖镜</div>
+		        </div>
+	        </div>
+	       
+	    </div>
+	    
+	     <div class="section zengzhi" id="section5">
+	        <div class="zz">
+	        	<i class="zz-title"></i>	 
+				<p class="zz-p">整合营销，抢占商机</p>
+				<ul class="zz-ul">
+					<li class="zz-li1-box">
+						<div class="zz-li1">
+							<span class="zz-li1-spn"></span>
+							<i class="zz-cup-left"></i>
+							<i class="zz-cup-right"></i>
+						</div>
+						<strong>搜索引擎</strong>
+						<p>SEO 优化</p>
+						<p>搜索引擎竞价</p>
+					</li>
+					
+					<li class="zz-li1-box">
+						<div class="zz-li1">
+							<span class="zz-li2-spn"></span>
+							<i class="zz-cup-left"></i>
+							<i class="zz-cup-right"></i>
+						</div>
+						<strong>微信营销</strong>
+						<p>公众账号 / 微网站</p>
+						<p>微盟 ( 微社区 )</p>
+					</li>
+					<li class="zz-li1-box">
+						<div class="zz-li1">
+							<span class="zz-li3-spn"></span>
+							<i class="zz-cup-left"></i>
+							<i class="zz-cup-right"></i>
+						</div>
+						<strong>微博营销</strong>
+						<p>企业蓝V认证</p>
+						<p>官方微博接入网站</p>
+					</li>
+					<li class="zz-li1-box">
+						<div class="zz-li1">
+							<span class="zz-li4-spn"></span>
+							<i class="zz-cup-left"></i>
+							<i class="zz-cup-right"></i>
+						</div>
+						<strong>消息推送</strong>
+						<p>短信平台接口</p>
+						<p>Email 推送</p>
+					</li>
+					<li class="zz-li1-box">
+						<div class="zz-li1">
+							<span class="zz-li5-spn"></span>
+							<i class="zz-cup-left"></i>
+							<i class="zz-cup-right"></i>
+						</div>
+						<strong>在线支付</strong>
+						<p>支付宝、银联</p>
+						<p>Paypal 接口</p>
+					</li>
+					
+					<li class="zz-li1-box">
+						<div class="zz-li1">
+							<span class="zz-li6-spn"></span>
+							<i class="zz-cup-left"></i>
+							<i class="zz-cup-right"></i>
+						</div>
+						<strong>论坛聚人</strong>
+						<p>独立开发</p>
+						<p>会员打通</p>
+					</li>
+				</ul>
+				
+	        </div>
+	    </div>
+	    
+	     <div class="section guanyu" id="section6">
+	       <div class="gy">
+	       	
+       		<ul class='gy-ul1'>
+       			<li>思想</li>
+       			<li>关于</li>
+       			<li>荣耀</li>
+       		</ul>
+	       	<div class="gy-box">
+	       		<ul class="gy-ul2">
+	       			<li>
+	       				<span class="gy-title1">厚积薄发</span>
+	       				<p>
+	       					登上峰顶，不是为了饱览风光，是为了寻找更高的山峰
+	       					<br />
+	       					日出东方，告别了昨天的荣耀，将光芒照向更远的地方
+	       					<br />
+	       					一路上，我们更在意如何积累和沉淀
+	       					<br />
+	       					<span class="gy-title2">下一秒，让你看，我们到底有多强</span>
+	       				</p>
+	       			</li>
+	       			
+	       			<li>
+	       				<p class="gy-title3">千助科技</p>
+	       				<p class="gy-title3p">成立于2008年，坐落于北京中关村科技园区，是中国优秀互联网服务提<br />供商。
+	       				自成立以来，专注于高端网站建设、移动互联应用、B/S架构系统研发<br />云服
+	       				务器部署和运维，为企业客户的互联网应用提供一站式服务。</p>
+	       				<p class="gy-p3">我们始终坚持以客户需求为导向，为追求用户体验设计，提供有针对性的<br />项目
+	       				解决方案，千助人将不断地超越自我，挑战险峰！</p>
+	       			</li>
+	       			<li>
+	       				<p class="gy-title3">放下荣誉，放眼未来</p>
+	       				<ul class="gy-ul3">
+	       					<li>
+	       						<span>2009年 &nbsp;&nbsp;&nbsp;<i>-</i> &nbsp;&nbsp;&nbsp;荣获海淀区创新企业</span>
+	       					</li>
+	       					<li>
+	       						<span>2010年 &nbsp;&nbsp;&nbsp;<i>-</i> &nbsp;&nbsp;&nbsp;设计联盟评选为金牌设计企业</span>
+	       					</li>
+	       					<li>
+	       						<span>2010年 &nbsp;&nbsp;&nbsp;<i>-</i> &nbsp;&nbsp;&nbsp;荣获中关村高新技术企业</span>
+	       					</li>
+	       					<li>
+	       						<span>2011年 &nbsp;&nbsp;&nbsp;<i>-</i> &nbsp;&nbsp;&nbsp;成功注册 " 千助 " 商标，树立品牌</span>
+	       					</li>
+	       					<li>
+	       						<span>2013年 &nbsp;&nbsp;&nbsp;<i>-</i> &nbsp;&nbsp;&nbsp;已拥有自主知识产权，国家软件著作权达12项之多</span>
+	       					</li>
+	       				</ul>
+	       			</li>
+	       			
+	       			<li>
+	       				<span class="gy-title1">厚积薄发</span>
+	       				<p>
+	       					登上峰顶，不是为了饱览风光，是为了寻找更高的山峰
+	       					<br />
+	       					日出东方，告别了昨天的荣耀，将光芒照向更远的地方
+	       					<br />
+	       					一路上，我们更在意如何积累和沉淀
+	       					<br />
+	       					<span class="gy-title2">下一秒，让你看，我们到底有多强</span>
+	       				</p>
+	       			</li>
+	       		</ul>
+	       	</div>
+	    </div>	
+	        <div class="gy-foot">
+	        	<ul>
+	        		<li>
+	        			<span>611</span>
+	        			<p>位企业客户信赖之选</p>
+	        		</li>
+	        		<li>
+	        			<span>267</span>
+	        			<p>上市/集团企业设计作品</p>
+	        		</li>
+	        		<li>
+	        			<span>2010</span>
+	        			<p>年度金牌设计企业</p>
+	        		</li>
+	        		<li>
+	        			<span>12</span>
+	        			<p>项国家软件著作权</p>
+	        		</li>
+	        		<li>
+	        			<span>96%</span>
+	        			<p>以上的客户续费率</p>
+	        		</li>
+	        	</ul>
+	        </div>
+	    </div>
+	    
+	     <div class="section lianxi" id="section7">
+	        <div class="lx">
+	        	<ul class="lx-ul">
+	        		<li class="lx-li1">
+	        			<i></i>
+	        		</li>
+	        		<li class="lx-li2">
+	        			<i></i>
+	        			<p>
+	        				中国 <span>·</span> 北京  <span>·</span> 中关村科技园<br />
+	        				联系电话 <span>:</span> 010-58851578 <span>/</span> 58859656<br />
+	        				地址 <span>:</span> 海淀区上地东路盈创动力E座905<br />
+	        				邮编 <span>:</span> 100085 <a href="" class="lx-p-a">[ 工作机会 ]</a><br />
+	        			</p>
+	        		</li>
+	        		<li class="lx-li3">
+	        			<p>
+	        				Email：Service@1000zhu.com<br />
+	        				中文域名<span>:</span> 千助.中国  <span>/</span> 千助.com<br />
+	        				Copyright 2008-2015 &nbsp; 千助科技 版权所有<br />
+	        				京ICP备 08102474 号<br />
+	        				京公网安备 11010802010984 号
+	        			</p>
+	        			
+	        		</li>
+	        		
+	        	</ul>
+	        	<div class="lx-foot">
+    				<i></i>
+    			</div>
+	        </div>
+	    </div>
+	</div>
+
+	
+	    <!--[if IE]>
+			<script type="text/javascript">
+				 var console = { log: function() {} };
+			</script>
+		<![endif]-->
+    <script>  
+        var swiper = new Swiper('.swiper-container', {
+	        pagination: '.swiper-pagination',
+	        nextButton: '.swiper-button-next',
+	        prevButton: '.swiper-button-prev',
+	        slidesPerView: 1,
+	        paginationClickable: true,
+	        spaceBetween: 0,
+	        loop: true,
+	        autoplay : 5000,
+	        onSlideChangeEnd:function(swiper){
+        	
+	            if(swiper.activeIndex==2){
+	                $('.bgc-con-b').animate({'width':'50%','opacity':1},400,'swing')
+	                $('.bgc-con-b1').animate({'right':'5%','opacity':1},500,'swing')
+	            };
+	            if(swiper.activeIndex==3){
+	                $('.bgc-con-c span').animate({'fontSize':36,'opacity':1},600,'swing')
+	                $('.bgc-con-c p').delay(500).animate({'opacity':1},400,'swing')
+	            }
+	            if(swiper.activeIndex==4 || swiper.activeIndex==0){
+	                $('.bgc-con-d span').animate({'top':0,'opacity':1},600,'swing')
+	                $('.bgc-con-d i').animate({'top':0,'opacity':1},600,'swing')
+	                $('.bgc-con-d p').animate({'top':0,'opacity':1},900,'swing')
+	            };
+	   		}
+	    });
+	    
+   
+    </script>
+	
+	 
+
+</body>
+</html>
